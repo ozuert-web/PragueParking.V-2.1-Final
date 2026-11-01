@@ -1,0 +1,7 @@
+﻿#Priser ska vara i CZK per påbörkjad timme.
+#Prisändrigar av belopp sker efter likhetstecknet
+
+Car = 20
+MC = 10 
+Bicycle = 5
+Bus = 80

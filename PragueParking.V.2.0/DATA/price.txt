@@ -1,0 +1,4 @@
+﻿# Priser i CZK per påbörjad timme.
+
+Car = 20
+MC = 10

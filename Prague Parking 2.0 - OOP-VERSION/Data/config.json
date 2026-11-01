@@ -1,0 +1,24 @@
+﻿{
+  "SpotCount": 100,
+  "DefultSpotSize": 4,
+  "HighCelingSpots": 50,
+  "SpotSizes": [],
+  "VehicaleTypes": {
+    "Car": {
+      "Size": 4,
+      "HighCeilingOnly": false
+    },
+    "MC": {
+      "Size": 2,
+      "HighCeilingOnly": false
+    },
+    "Bicycle": {
+      "Size": 1,
+      "HighCeilingOnly": false
+    },
+    "Bus": {
+      "Size": 16,
+      "HighCeilingOnly": true
+    }
+  }
+}
