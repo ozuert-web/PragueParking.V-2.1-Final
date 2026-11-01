@@ -328,5 +328,3 @@ Följande funktioner har manuellt provats under utvecklingen. Listan beskriver g
 | Omstart efter skapad testdata | Antalet testfordon dubbleras inte. |
 | Dubbelt registreringsnummer | Incheckningen nekas. |
 
-
-Genererade byggmappar som bin, obj och .vs behöver inte läggas i Git. Projektets startfiler under Data ska däremot vara med. Om en särskild sparad fordonslista ska följa med måste det ordnas uttryckligen; körningsmappens genererade filer följer inte automatiskt med en källkodsleverans.
