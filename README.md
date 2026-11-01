@@ -328,50 +328,5 @@ Följande funktioner har manuellt provats under utvecklingen. Listan beskriver g
 | Omstart efter skapad testdata | Antalet testfordon dubbleras inte. |
 | Dubbelt registreringsnummer | Incheckningen nekas. |
 
-Systematiska tester av felaktiga pris- och konfigurationsfiler samt simulerat diskfel återstår. Körning från en helt ny kopia av repot behöver också kontrolleras inför inlämningen. Delar av felhanteringen finns i koden men räknas inte som verifierade enbart av det skälet.
-
-## Felsökning
-
-### Fel version startar
-
-Välj rätt konsolprojekt med **Set as Startup Project**. Programskylten visar vilken version som körs.
-
-### Prisfilen hittas inte
-
-Kontrollera att filen heter **price.txt**, inte prices.txt eller price.txt.txt. Kontrollera att den ligger i rätt projekts Data-mapp och har **Copy to Output Directory → Copy if newer**. Bygg sedan om.
-
-### Prisändringen visas inte
-
-Kontrollera att den fil som ändrats ligger i den körande versionens `bin/Debug/net10.0/Data` och att filen är sparad. Välj sedan **Läs om priser**. De två versionerna använder olika kopior.
-
-### Minst en fordonstyp måste finnas
-
-Kontrollera nyckeln **VehicaleTypes** i config.json. Den måste matcha C#-egenskapens stavning. Kontrollera även att objektet innehåller minst en fordonstyp.
-
-### JSON-fel vid uppstart
-
-Kontrollera dubbla citationstecken runt namn, kommatecken mellan egenskaper och att klamrarna är kompletta. Felmeddelandet kan ange rad och position. Kontrollera filen i den data-mapp som felmeddelandet visar.
-
-### Ingen testdata skapas
-
-En befintlig tom fordonsfil räknas som befintlig data och fylls inte på automatiskt. Testdata skapas endast när filen saknas. ID:n som DEMO-CAR ska inte innehålla mellanslag och typen Car ska ha samma stora och små bokstäver som i konfigurationen.
-
-### Signaturen ligger ovanför menyn
-
-I 2.1 placeras signaturen längst ner till höger när fönstret bedöms ha tillräckligt med utrymme. Annars används en högerställd reservplacering ovanför menyn. Maximera fönstret eller minska terminalens textstorlek för mer utrymme.
-
-## Dokumentation och leveranskontroll
-
-Den personliga loggboken och VG-reflektionen ska finnas med som separata dokument eller filer i repot.
-
-Kontrollera före inlämning:
-
-- Båda konsolprojekten och båda klassbiblioteken finns med i lösningen.
-- Projektens config.json och price.txt finns i repot och kopieras vid byggning.
-- Grundpriserna är återställda efter tester, särskilt Car = 20 i 2.1-projektets startfil.
-- Konfigurationerna är återställda till önskat standardläge.
-- Lösningen kan byggas och köras från en ny kopia med .NET 10 och återställda NuGet-paket.
-- Loggbok och personlig VG-reflektion är färdiga.
-- Repot är publikt och inlämningen länkar till själva repot.
 
 Genererade byggmappar som bin, obj och .vs behöver inte läggas i Git. Projektets startfiler under Data ska däremot vara med. Om en särskild sparad fordonslista ska följa med måste det ordnas uttryckligen; körningsmappens genererade filer följer inte automatiskt med en källkodsleverans.
